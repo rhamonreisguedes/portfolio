@@ -7,11 +7,9 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
+
 
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -40,7 +38,7 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" style={{backgroundColor: 'black'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -58,7 +56,7 @@ function Navbar() {
               textDecoration: "none",
             }}
           >
-            logo
+            Rhamon Guedes
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -79,7 +77,7 @@ function Navbar() {
                 alignItems: "center"
               }}
             >
-              LOGOOOOO
+              Rhamon Guedes
             </Typography>
             <IconButton
               size="large"
@@ -117,7 +115,7 @@ function Navbar() {
             </Menu>
           </Box>
 
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }} style={{justifyContent: 'flex-end'}}>
             {pages.map((page) => (
               <Button
                 key={page}
